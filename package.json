@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/joe-sawyer32/to-do-list#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mustache-express": "^1.2.4"
   }
 }

@@ -10,9 +10,13 @@
 
 <body>
     <h1>TO-DO LIST</h1>
-    <form action="/to-do-list" method="post">
-        <input type="text" value="My Next Item To Do" name="to-do-input" id="">
+    <form action="/" method="post">
+        <input type="text" value="My Next Item To Do" name="toDoInput" id="">
         <button type="submit">Add</button>
+
+        {{#todo}}
+            {{toDoInput}}
+        {{/todo}}
     </form>
 </body>
 
