@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Glegoo" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <div class="display">
+        <h1>To-Do List</h1>
+        <form class="addTodoForm" action="/todolist" method="post">
+            <input type="text" class="todoInput" name="toDoItem" placeholder="My Next Item To Do">
+            <input type="submit" class="addTodo" value="Add"> <br> <br>
+        </form>
+        {{#todoList}}
+            {{#toDoItem}}
+                <form class="buttonAndItem" action="/todoneList" method="post">
+                    <button type="submit" class="completeTodo" name="id" value={{id}}>Mark Complete</button> 
+                    <h3 class="todoItem">{{toDoItem}}</h3> <br>
+                </form>
+            {{/toDoItem}}
+        {{/todoList}}
+        <hr class="listDivider">
+        {{#todoneList}}
+            <h4 class="completedItem">{{toDoneItem}}</h4>
+        {{/todoneList}}
+    </div>
+</body>
+
+</html>

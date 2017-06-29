@@ -13,7 +13,7 @@ var itemCount = 0;
 // SET ENGINE
 app.engine("mustache", mustacheExpress());
 app.set("view engine", "mustache");
-app.set("views", path.join(__dirname, "/public"));
+app.set("views", path.join(__dirname, "/views"));
 
 // MIDDLEWARE
 app.use(bodyParser.urlencoded({ extended: false }));
